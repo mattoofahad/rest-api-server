@@ -16,4 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://mattoofahad:$HF_TOKEN@huggingface.co/spaces/mattoofahad/whatsapp-endpoint main
+        run: git push https://mattoofahad:$HF_TOKEN@huggingface.co/spaces/mattoofahad/rest-api-server main
