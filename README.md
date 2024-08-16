@@ -1,15 +1,15 @@
 ---
-title: This a fastapi endpoint for whatsapp chat.
-colorFrom: red
-colorTo: green
-emoji: 👌👌
+title: This a fastapi middleware.
+colorFrom: blue
+colorTo: yellow
+emoji: 🙌🙌
 sdk: docker
 app_file: main.py
 pinned: false
 ---
 
-# Whatsapp-Chatbot
-A simple repository to integrate a chatbot with whatsapp.
+<!-- # Whatsapp-Chatbot
+A simple repository to integrate a chatbot with whatsapp. -->
 
 <!-- <p float="left">
   <img src="" alt="screenshot1" width="300" style="margin-right: 20px;" />
@@ -33,16 +33,16 @@ To run and deploy the WhatsApp chatbot, you will need the following:
 
 5. OpenAI API: Sign up for the OpenAI API and obtain your Secret API key from user settings (you may require a paid account for this). -->
 
-## Installation and Usage 🚀💻
+## Installation and Usage 
 
 1. Create conda env
     ```bash
-    conda create -n whatsapp_bot_env python=3.10 -y
+    conda create -n rest_server python=3.10 -y
     ```
 
 2. Activate env
     ```bash
-    conda activate whatsapp_bot_env
+    conda activate rest_server
     ```
 
 3. Install the required Python packages:
@@ -51,7 +51,7 @@ To run and deploy the WhatsApp chatbot, you will need the following:
    pip install -r requirements.txt
    ```
 
-# docker
+<!-- # docker
 
 ## Docker 
 1. Create the docker container
@@ -62,7 +62,7 @@ To run and deploy the WhatsApp chatbot, you will need the following:
 2. run the container
    ```bash
    docker run -p 7860:7860 whatapp-endpoint
-   ```
+   ``` -->
 <!-- 4. Create a `.env` file in the root directory of the project. -->
 
 <!-- 5. Add the following lines to the `.env` file:
