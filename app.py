@@ -3,6 +3,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 import json
+from config import READ_HF_TOKEN
 
 from logs import logger, log_execution_time
 
@@ -16,9 +17,9 @@ async def twilio_message_endpoint(request: Request):
     user_input = data.get("Body", "")
     reqUrl = "https://mattoofahad-whatsapp-endpoint.hf.space/message"
     headersList = {
-        "User-Agent": "Thunder Client (https://www.thunderclient.com)",
         "accept": "application/json",
         "Content-Type": "application/json",
+        "Authorization": f"Bearer {READ_HF_TOKEN}" 
     }
     payload = json.dumps({"user_input": str(user_input)})
     response = requests.request("POST", reqUrl, data=payload, headers=headersList)
