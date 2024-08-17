@@ -29,7 +29,7 @@ pinned: false
 3. Run the local server:
 
    ```bash
-   uvicorn app:app --host 0.0.0.0 --port 5000
+   uvicorn main:app --host 0.0.0.0 --port 5000
    ```
 
 ## Docker 
