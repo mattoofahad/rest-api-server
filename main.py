@@ -1,6 +1,6 @@
 import requests
 from fastapi import FastAPI, Request
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import PlainTextResponse, JSONResponse
 from pydantic import BaseModel
 import json
 from config import READ_HF_TOKEN
