@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:3.11-slim
 
 # Create a user and switch to it
 RUN useradd -m -u 1000 user
