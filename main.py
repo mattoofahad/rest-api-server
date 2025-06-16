@@ -9,13 +9,13 @@ from logs import logger
 
 app = FastAPI()
 
-@app.get("/health", summary="Health Check", tags=["Health"])
-def health_check():
-    return JSONResponse(content={"status": "ok"})
+# @app.get("/health", summary="Health Check", tags=["Health"])
+# def health_check():
+#     return JSONResponse(content={"status": "ok"})
 
 @app.post("/message")
 async def twilio_message_endpoint(request: Request):
-    data = await request.form()
+    # data = await request.form()
     user_input = data.get("Body", "")
     reqUrl = "https://mattoofahad-whatsapp-endpoint.hf.space/message"
     headersList = {
