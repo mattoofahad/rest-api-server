@@ -5,15 +5,14 @@ from pydantic import BaseModel
 import json
 from config import READ_HF_TOKEN
 
-from logs import logger, log_execution_time
+from logs import logger
 
 app = FastAPI()
 
 @app.get("/health", summary="Health Check", tags=["Health"])
 def health_check():
     return JSONResponse(content={"status": "ok"})
-    
-@log_execution_time
+
 @app.post("/message")
 async def twilio_message_endpoint(request: Request):
     data = await request.form()
