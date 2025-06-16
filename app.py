@@ -9,7 +9,10 @@ from logs import logger, log_execution_time
 
 app = FastAPI()
 
-
+@app.get("/health", summary="Health Check", tags=["Health"])
+def health_check():
+    return JSONResponse(content={"status": "ok"})
+    
 @log_execution_time
 @app.post("/message")
 async def twilio_message_endpoint(request: Request):
